@@ -15,7 +15,7 @@ We try to take care off the required packages installed on your machine.
         will update the packages and install
 
 2. download or clone the git repo into your home directory .
-    git clone https://github.com/   && cd parity-eth
+    git clone https://github.com/leokofi/parity-eth.git && cd parity-eth
     what should happen:
         this will download the parity-eth repo from github; and create a folder called parity-eth
         once this is done, it will cd into the folder.
