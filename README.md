@@ -7,9 +7,9 @@ We try to take care off the required packages installed on your machine.
     open terminal ctrl+alt+t copy and paste the following into the terminal window, or type it whatever works for you.
 
 ```
-    sudo apt-get update
-    sudo apt-get install nodejs -y
-    sudo apt-get install npm -y
+sudo apt-get update
+sudo apt-get install nodejs -y
+sudo apt-get install npm -y
 ```
     What should happen:
     > This should set nodejs and npm support
@@ -18,7 +18,7 @@ We try to take care off the required packages installed on your machine.
 2. Download or clone the git repo into your home directory.
 
 ```
-    git clone https://github.com/leokofi/parity-eth.git && cd parity-eth
+git clone https://github.com/leokofi/parity-eth.git && cd parity-eth
 ```
     what should happen:
     > this will download the parity-eth repo from github; and create a folder called parity-eth
@@ -31,7 +31,7 @@ We try to take care off the required packages installed on your machine.
 
 4. run the following commands in the terminal
 ```
-    npm install
+npm install
 ```
     What should happen:
     > This will install all required npm packages in the folder that are list in the package.json file, and it also runs the install script in the bin directory.
@@ -41,7 +41,7 @@ We try to take care off the required packages installed on your machine.
 5. run decide what options you would like
 
 ```
-    npm start [option]
+npm start [option]
 ```    
     > private blockchain => this is your local blockchain and you load the pre configure gensis block, you are doing the mining
     > testnet blockchain => public blockchain for testing your apps, this can be reset anytime. fake eth
