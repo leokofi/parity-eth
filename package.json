@@ -1,0 +1,30 @@
+{
+  "name": "parity-testnet-node",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "./bin/start-parity.sh",
+    "util": "node util console"
+  },
+  "description": "parity in testnet mode with node console",
+  "repository": {},
+  "keywords": [
+    "ethereum",
+    "parity",
+    "nodejs",
+    "blockchain",
+    "cli",
+    "dapp"
+  ],
+
+  "author": "Leonard K. Fiadzinu",
+  "license": "FCUK",
+  "dependencies": {
+    "web3": ">=0.15.3",
+    "mocha": ">=2.5.3"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+
+}
