@@ -1,3 +1,4 @@
+// this has been build on many code examples and resources from friends and enemies.
 const repl = require('repl');
 var Web3 = require("web3");
 var fs = require('fs');
