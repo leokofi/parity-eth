@@ -6,10 +6,11 @@ We try to take care off the required packages installed on your machine.
 1. Install required packages first via the commands below.
     open terminal ctrl+alt+t copy and paste the following into the terminal window, or type it whatever works for you.
 
-    sudo apt-get update
-    sudo apt-get install nodejs -y
-    sudo apt-get install npm -y
-
+```
+   * sudo apt-get update
+   * sudo apt-get install nodejs -y
+   * sudo apt-get install npm -y
+```
     what should happen:
         This should set nodejs and npm support
         will update the packages and install
