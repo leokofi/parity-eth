@@ -46,13 +46,19 @@ What should happen:
 npm start [option]
 ``` 
 > private blockchain => this is your local blockchain and you load the pre configure gensis block, you are doing the mining
-> testnet blockchain => public blockchain for testing your apps, this can be reset anytime. fake eth
+> testnet blockchain => public blockchain for testing your apps, this can be reset anytime fake eth
 > live blockchain => this is the real deal... mistakes here will cost you eth
 
 what should happen:
-> the npm start command with option will create a directory in $HOME
+> The npm start command with option will create a directory in $HOME if this is the first time.
+> it will lunch a browser that will point to http://localhost:3030 for the UI to parity stats and wallet info.
     => paridata/livenet; for the live blockchain network
     => paridata/testnet; for the test blockchain network
     => paridata/private; for your own private blockchain network
+
+For private blockchain the gensis.json file is loaded, hence you need to run ethminer in another terminal to start mining your blocks.
+
+Todo : for private blockchain being able to configure and setup other nodes to create a full private blockchain.
+
 
 keys are stored in the subdirectory of paridata/$typeofchain/keys
