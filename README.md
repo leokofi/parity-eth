@@ -30,9 +30,11 @@ git clone https://github.com/leokofi/parity-eth.git && cd parity-eth
     > list all the files and directory that are in the folder even the hidden once
 
 4. run the following commands in the terminal
+
 ```
 npm install
 ```
+
     What should happen:
     > This will install all required npm packages in the folder that are list in the package.json file, and it also runs the install script in the bin directory.
     > Install.sh script will install parity binary without developer options. If you want developer options edit the install.sh and comment out the default and uncomment the developer option.  
@@ -42,7 +44,8 @@ npm install
 
 ```
 npm start [option]
-```    
+``` 
+   
     > private blockchain => this is your local blockchain and you load the pre configure gensis block, you are doing the mining
     > testnet blockchain => public blockchain for testing your apps, this can be reset anytime. fake eth
     > live blockchain => this is the real deal... mistakes here will cost you eth
