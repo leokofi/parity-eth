@@ -16,6 +16,8 @@ function pause(){
     read -p "$*"
 }
 
+pause 'First we will update your package and the add the ethereum repo to your source.list, press [Enter] to continue...'
+
 ##Enable sources, add PPAs and update sources
 sudo apt-get -y update
 sudo apt-get install software-properties-common
@@ -30,8 +32,8 @@ pause 'This script will install most of the Ethereum parity packages, press [Ent
 
 # this is for the binary install of parity don't need to do anythiny else one it is done.
 bash <(curl https://get.parity.io -Lk) # this one install parity without the rust compiler for development
-# this below installs the developer addition. comment out if you want rust and other packages installed
-#bash <(curl https://raw.githubusercontent.com/ethcore/parity/master/install-deps.sh -L)
+# the below will installs the developer addition. comment out if you want rust and other packages installed
+# bash <(curl https://raw.githubusercontent.com/ethcore/parity/master/install-deps.sh -L)
 
 
 pause 'hopefully no errors showed up in the install process, press [Enter] to finish install...'
