@@ -39,6 +39,7 @@ What should happen:
 > This will install all required npm packages in the folder that are list in the package.json file, and it also runs the install script in the bin directory.
 > Install.sh script will install parity binary without developer options. If you want developer options edit the install.sh and comment out the default and uncomment the developer option.  
 > It will install parity and create .parity directory in the $HOME directory
+> it will also create a node_modules folder which keeps all nodejs stuff.
 
 5. Decide what options you would like and run the command listed
 
@@ -52,9 +53,9 @@ npm start [option]
 what should happen:
 > The npm start command with option will create a directory in $HOME if this is the first time.
 > it will lunch a browser that will point to http://localhost:3030 for the UI to parity stats and wallet info.
-    => paridata/livenet; for the live blockchain network
-    => paridata/testnet; for the test blockchain network
-    => paridata/private; for your own private blockchain network
+* paridata/livenet; for the live blockchain network
+* paridata/testnet; for the test blockchain network
+* paridata/private; for your own private blockchain network
 
 For private blockchain the gensis.json file is loaded, hence you need to run ethminer in another terminal to start mining your blocks.
 
@@ -72,6 +73,15 @@ it will give you ">" that you can use to interact with ethereum. below are some 
 ```bash
 web3.eth.getBalance(web3.eth.accounts[0]) //this will get the account balance of the coinbase account in wei
 web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0])) // this will give you the account balance in eth
-```
 
-keys are stored in the subdirectory of paridata/$typeofchain/keys
+```
+```text
+\bin => hold the bash files i.e install.sh, start-parity.sh stop.sh and clean.sh
+\lib => holds gensis or any other liberary that we might need; the default pswd file is stored here.. you can use this for quick unlocking of accounts. use only in testnet and private chain
+\node_modules => which is created when you first run the npm install command, this keeps all the node packages required
+package.json file => is details all that node/npm are doing.
+util.js is the file that connects you to ethereum via node console, i will include some function later.
+
+```
+Each chain has it's own directory where info is stored ($HOME/paridata/$typeofchain)
+Keys are stored in the subdirectory of paridata/$typeofchain/keys
