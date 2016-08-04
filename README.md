@@ -70,7 +70,7 @@ What should happen:
 it will give you > that you can use to interact with ethereum. below are some commands you can tryout.
 
 ```bash
-
+npm run util
 ```
 
 keys are stored in the subdirectory of paridata/$typeofchain/keys
