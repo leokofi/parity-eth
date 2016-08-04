@@ -63,14 +63,14 @@ Todo : for private blockchain being able to configure and setup other nodes to c
 to interact with ethereum via com line... you can use node, open a new terminal and type:
 
 ```bash
-node util
+npm run util
 ```
 
 What should happen:
 it will give you > that you can use to interact with ethereum. below are some commands you can tryout.
 
 ```bash
-npm run util
+
 ```
 
 keys are stored in the subdirectory of paridata/$typeofchain/keys
