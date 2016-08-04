@@ -60,17 +60,18 @@ For private blockchain the gensis.json file is loaded, hence you need to run eth
 
 Todo : for private blockchain being able to configure and setup other nodes to create a full private blockchain.
 
-to interact with ethereum via com line... you can use node, open a new terminal and type:
+to interact with ethereum via command line... you can use node, open a new terminal and type:
 
 ```bash
 npm run util
 ```
 
 What should happen:
-it will give you > that you can use to interact with ethereum. below are some commands you can tryout.
+it will give you ">" that you can use to interact with ethereum. below are some commands you can tryout.
 
 ```bash
-
+web3.eth.getBalance(web3.eth.accounts[0]) //this will get the account balance of the coinbase account in wei
+web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0])) // this will give you the account balance in eth
 ```
 
 keys are stored in the subdirectory of paridata/$typeofchain/keys
