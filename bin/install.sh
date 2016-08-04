@@ -19,13 +19,12 @@ function pause(){
 ##Enable sources, add PPAs and update sources
 sudo apt-get -y update
 sudo apt-get install software-properties-common
-sudo apt-get install software-properties-common
 sudo add-apt-repository -y ppa:ethereum/ethereum-qt
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 sudo apt-get -y update
 sudo apt-get -y upgrade
-sudo apt-get install ethminer -y
+sudo apt-get install solc ethminer -y
 
 pause 'This script will install most of the Ethereum parity packages, press [Enter] to continue...'
 

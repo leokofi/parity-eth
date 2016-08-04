@@ -6,7 +6,7 @@ We try to take care off the required packages installed on your machine.
 1. Install required packages first via the commands below.
 > Open terminal ctrl+alt+t copy and paste the following into the terminal window, or type it whatever works for you.
 
-```
+```bash
 sudo apt-get update
 sudo apt-get install nodejs -y
 sudo apt-get install npm -y
@@ -17,7 +17,7 @@ What should happen:
 
 2. Download or clone the git repo into your home directory.
 
-```
+```bash
 git clone https://github.com/leokofi/parity-eth.git && cd parity-eth
 ```
 what should happen:
@@ -31,7 +31,7 @@ What should happen:
 
 4. run the following commands in the terminal
 
-```
+```bash
 npm install
 ```
 
@@ -42,9 +42,9 @@ What should happen:
 
 5. Decide what options you would like and run the command listed
 
-```
+```bash
 npm start [option]
-``` 
+```
 > private blockchain => this is your local blockchain and you load the pre configure gensis block, you are doing the mining
 > testnet blockchain => public blockchain for testing your apps, this can be reset anytime fake eth
 > live blockchain => this is the real deal... mistakes here will cost you eth
@@ -60,5 +60,17 @@ For private blockchain the gensis.json file is loaded, hence you need to run eth
 
 Todo : for private blockchain being able to configure and setup other nodes to create a full private blockchain.
 
+to interact with ethereum via com line... you can use node, open a new terminal and type:
+
+```bash
+node util
+```
+
+What should happen:
+it will give you > that you can use to interact with ethereum. below are some commands you can tryout.
+
+```bash
+
+```
 
 keys are stored in the subdirectory of paridata/$typeofchain/keys
