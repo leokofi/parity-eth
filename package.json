@@ -2,6 +2,7 @@
   "name": "parity-testnet-node",
   "version": "0.1.0",
   "scripts": {
+    "install": "./bin/install.sh",
     "start": "./bin/start-parity.sh",
     "util": "node util console"
   },
