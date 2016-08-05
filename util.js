@@ -14,6 +14,19 @@ function loadEmpty () {
   console.log("HI Leonard");
 }
 
+//pass the file name and path to you code and it will make a bin directory and put all the compiled info there.
+function buildContract (name, path){
+    var fileName = name;
+    var filePath = path;
+    var source = fs.readFileSync();
+
+
+}
+
+function deployContract() {
+
+}
+
 module.exports.loadEmpty = loadEmpty;
 module.exports.web3 = web3;
 

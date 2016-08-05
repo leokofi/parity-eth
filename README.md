@@ -52,7 +52,7 @@ npm start [option]
 
 what should happen:
 > The npm start command with option will create a directory in $HOME if this is the first time.
-> it will lunch a browser that will point to http://localhost:3030 for the UI to parity stats and wallet info.
+> it will lunch a browser that will point to http://127.0.0.1:8080/ for the UI to parity stats and wallet info.
 * paridata/livenet; for the live blockchain network
 * paridata/testnet; for the test blockchain network
 * paridata/private; for your own private blockchain network
