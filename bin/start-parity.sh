@@ -9,7 +9,7 @@ dataDir="paridata"
 
 # if [ ! $# == 1 ]; then
 if [ $# -lt 1 -o $# -ge 2 ]; then
-    echo "Use need to add one parimeter to the command"
+    echo "You need to add one parimeter to the command"
     echo "e.g npm start testnet"
     echo "e.g npm start private"
     echo "e.g npm start livenet"
@@ -19,9 +19,12 @@ fi
 # so we have installed parity and rust
 # befor we go any deeper lets check if we have at least one account.
 
+# this runs the parity command to list all accounts created and available in parity and put the output in an array
 output=( $(parity account list) )
+# store the first address, which is index [0] in the key array and is usually the default address
 coinbase=${output[2]}
 
+# check to see if we have at least one account, if yes set address to that if not create an account, with default password and set the address to it
 if [ ! -z "$coinbase" ]; then
     address=${output[2]}
     # exit
@@ -39,6 +42,7 @@ fi
 
 # echo $#
 
+# check to see what enviroment we are starting
 if [ $# = 1 ] && [ $1 = "private" ]; then
     typeofchain=$1
     # filePath="./lib/genesis.json"
@@ -82,7 +86,7 @@ echo "open a new terminal ctrl + alt + t, and type ethminer"
 # parity $chainBlock --identity leonode --nodiscover --nat none --datadir $root/$dataDir/$typeofchain  $chainBlock --pruning fast --author $address -jw ui
 parity --chain $root/parity-eth/lib/genesis.json --datadir $root/$dataDir/$typeofchain  --keys-path $root/$dataDir/$typeofchain/keys  --unlock $address  --password ./lib/pswd  --identity sonia  --pruning fast --author $address ui
 # parity --chain ~/parity-eth/lib/genesis.json --fork normal --datadir $root/$dataDir/$typeofchain --pruning fast -j ui
-echo "parity --chain $root/parity-eth/lib/genesis.json --datadir $root/paridata/private -jw ui"
+# echo "parity --chain $root/parity-eth/lib/genesis.json --datadir $root/paridata/private -jw ui"
 
 else
 

@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "scripts": {
     "install": "./bin/install.sh",
+    "upgrade": ".bin/upgrade-parity.sh",
     "start": "./bin/start-parity.sh",
     "util": "node util console"
   },
-  "description": "parity in testnet mode with node console",
+  "description": "parity in testnet, private and livenet mode with node console",
   "repository": {},
   "keywords": [
     "ethereum",
     "parity",
     "nodejs",
+    "private blockchain",
     "blockchain",
     "cli",
     "dapp"
