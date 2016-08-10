@@ -11,7 +11,7 @@ currentParityVer=${parityVersion[2]}
 
 pause "The upgrade will only be done for npm packages and parity, your current parity version is $currentParityVer, press [Enter] to continue..."
 echo ""
-echo $currentParityVer
+# echo $currentParityVer
 
 # now we run the script to install parity, as it doesn't have an upgrade command yet'
 # default easy install command, but it is behind
@@ -19,7 +19,7 @@ echo $currentParityVer
 
 # the command below get you the latest working copy but you have to do extra working.
 # once this is build you will have to copy files to /usr/local/bin
-# nevermind it is taken care of....
+# nevermind it is taken care of, we will copy it over once it is done...
 # bash <(curl https://raw.githubusercontent.com/ethcore/parity/master/install-deps.sh -L)
 
 # cd /tmp/parity/ && cp target/

@@ -9,7 +9,7 @@ if (typeof web3 == "undefined"){
     web3.eth.defaultAccount = web3.eth.coinbase; 
 }
 
-//"install: ./bin/install.sh",
+
 function loadEmpty () {
   console.log("HI Leonard");
 }
@@ -23,12 +23,16 @@ function buildContract (name, path){
 
 }
 
+// give it the file name without the .sol and path to the bin directory and it will deploy the contract onto the blockchain
+// returning the contract address, ABI and
 function deployContract() {
 
 }
 
 module.exports.loadEmpty = loadEmpty;
 module.exports.web3 = web3;
+module.exports.buildContract = buildContract;
+module.exports.deployContract = deployContract;
 
 
 if (process.argv[2])
