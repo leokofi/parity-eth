@@ -24,7 +24,7 @@ echo $currentParityVer
 
 # cd /tmp/parity/ && cp target/
 
-parityUpgradeVersion( $(parity --version) )
+parityUpgradeVersion=( $(parity --version) )
 upgradedParityVer=${parityUpgradeVersion[2]}
 
 if [ $currentParityVer = $upgradedParityVer ]; then
