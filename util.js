@@ -14,7 +14,7 @@ function loadEmpty () {
   console.log("HI Leonard");
 }
 
-//pass the file name and path to you code and it will make a bin directory and put all the compiled info there.
+//pass the file name and path to you code and it will make a bin directory and put all the compiled info there. will create contract binary and ABI
 function buildContract (name, path){
     var fileName = name;
     var filePath = path;
@@ -24,7 +24,7 @@ function buildContract (name, path){
 }
 
 // give it the file name without the .sol and path to the bin directory and it will deploy the contract onto the blockchain
-// returning the contract address, ABI and
+// returning the contract address
 function deployContract() {
 
 }
