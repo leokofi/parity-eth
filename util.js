@@ -1,5 +1,6 @@
 // this has been build on many code examples and resources from friends and enemies.
 const repl = require('repl');
+var solc = require('solc');
 var Web3 = require("web3");
 var fs = require('fs');
 //var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
@@ -29,6 +30,7 @@ function deployContract() {
 
 }
 
+module.exports.solc = solc;
 module.exports.loadEmpty = loadEmpty;
 module.exports.web3 = web3;
 module.exports.buildContract = buildContract;
