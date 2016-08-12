@@ -4,7 +4,7 @@ This setup has been tested on Ubuntu 14.04 and 16.04, and should work for most d
 We try to take care off the required packages installed on your machine.
 
 1. Install required packages first via the commands below.
-> Open terminal ctrl+alt+t copy and paste the following into the terminal window, or type it whatever works for you.
+* Open terminal ctrl+alt+t copy and paste the following into the terminal window, or type it whatever works for you.
 
 ```bash
 sudo apt-get update
@@ -12,8 +12,8 @@ sudo apt-get install nodejs -y
 sudo apt-get install npm -y
 ```
 What should happen:
-> This should set nodejs and npm support
-> will update the packages and install
+* This should set nodejs and npm support
+* will update the packages and install
 
 2. Download or clone the git repo into your home directory.
 
@@ -21,13 +21,13 @@ What should happen:
 git clone https://github.com/leokofi/parity-eth.git && cd parity-eth
 ```
 what should happen:
-> This will download the parity-eth repo from github; and create a folder called parity-eth
-> once this is done, it will cd into the folder.
+* This will download the parity-eth repo from github; and create a folder called parity-eth
+* once this is done, it will cd into the folder.
 
 3. ls -a in the parity-eth
 
 What should happen:
-> list all the files and directory that are in the folder even the hidden once
+* list all the files and directory that are in the folder even the hidden once
 
 4. run the following commands in the terminal
 
@@ -37,24 +37,24 @@ npm install
 
 What should happen:
 
-> This will install all required npm packages in the folder that are list in the package.json file, and it also runs the install script in the bin directory.
-> Install.sh ** This will take about 10 min** script will compile and install parity. This will install the development version and not the current stable version and uncomment the developer option.  
-> It will install parity and create .parity directory in the $HOME directory
-> it will also create a node_modules folder which keeps all nodejs stuff.
+* This will install all required npm packages in the folder that are list in the package.json file, and it also runs the install script in the bin directory.
+* Install.sh ** This will take about 10 min** script will compile and install parity. This will install the development version and not the current stable version and uncomment the developer option.  
+* It will install parity and create .parity directory in the $HOME directory
+* it will also create a node_modules folder which keeps all nodejs stuff.
 
 5. Decide what options you would like and run the command listed
 
 ```bash
 npm start [option]
 ```
-> checks if you have at least one address setup, if not it will create one for you.
-> private blockchain => this is your local blockchain and you load the pre configure gensis block, you are doing the mining
-> testnet blockchain => public blockchain for testing your apps, this can be reset anytime fake eth
-> live blockchain => this is the real deal... mistakes here will cost you eth
+* checks if you have at least one address setup, if not it will create one for you.
+* private blockchain => this is your local blockchain and you load the pre configure gensis block, you are doing the mining
+* testnet blockchain => public blockchain for testing your apps, this can be reset anytime fake eth
+* live blockchain => this is the real deal... mistakes here will cost you eth
 
 what should happen:
-> The npm start command with option will create a directory in $HOME if this is the first time.
-> it will lunch a browser that will point to http://127.0.0.1:8080/ for the UI to parity stats and wallet info.
+* The npm start command with option will create a directory in $HOME if this is the first time.
+* it will lunch a browser that will point to http://127.0.0.1:8080/ for the UI to parity stats and wallet info.
 * paridata/livenet; for the live blockchain network
 * paridata/testnet; for the test blockchain network
 * paridata/private; for your own private blockchain network
