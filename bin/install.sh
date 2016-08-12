@@ -1,16 +1,6 @@
-#!bin/bash
+#!/bin/bash
+# this will upgrade parity create
 
-# check to see if system has app need applications installed
-
-#check if package is installed
-#packageName1="ethminer"
-#packageChecker=dpkg-query -l $packageName1
-
-#if [ ! packageChecker ] then
-#    sudo apt-get install $packageName1 -y
-#    echo "ethminer has been installed and now moving on to the fun part"
-
-#fi
 
 function pause(){
     read -p "$*"
@@ -18,10 +8,10 @@ function pause(){
 
 pause 'First we will update your package and the add the ethereum repo to your source.list, press [Enter] to continue...'
 
-##Enable sources, add PPAs and update sources
+## Enable sources, add PPAs and update sources
 sudo apt-get -y update
 sudo apt-get install software-properties-common
-sudo add-apt-repository -y ppa:ethereum/ethereum-qt
+#sudo add-apt-repository -y ppa:ethereum/ethereum-qt
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 sudo apt-get -y update
@@ -30,13 +20,20 @@ sudo apt-get install solc ethminer -y
 
 pause 'This script will install most of the Ethereum parity packages, press [Enter] to continue...'
 
+RUSTC_PATH=$(which rustc 2>/dev/null)
+if [[ -f $RUSTC_PATH ]]; then
+    echo " rustc is already installed... moving along"
+else
+    bash <(curl https://sh.rustup.rs -sSf | sh)
+fi
+
 # this is for the binary install of parity don't need to do anythiny else one it is done.
 # bash <(curl https://get.parity.io -Lk) # this one install parity without the rust compiler for development
 # the below will installs the developer addition. comment out if you want rust and other packages installed
 # bash <(curl https://raw.githubusercontent.com/ethcore/parity/master/install-deps.sh -L)
 
-#cd /tmp/ && git clone https://github.com/ethcore/parity && cd parity
-#bash <(cargo build --release)
+# cd /tmp/ && git clone https://github.com/ethcore/parity && cd parity
+# bash <(cargo build --release)
 bash <(cargo install --git https://github.com/ethcore/parity.git parity)
 
 

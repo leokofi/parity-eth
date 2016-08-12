@@ -1,45 +1,367 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start', 'private' ]
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
 2 info using npm@3.5.2
 3 info using node@v4.2.6
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info lifecycle parity-testnet-node@0.1.0~prestart: parity-testnet-node@0.1.0
-6 silly lifecycle parity-testnet-node@0.1.0~prestart: no script for prestart, continuing
-7 info lifecycle parity-testnet-node@0.1.0~start: parity-testnet-node@0.1.0
-8 verbose lifecycle parity-testnet-node@0.1.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle parity-testnet-node@0.1.0~start: PATH: /usr/share/npm/bin/node-gyp-bin:/home/leo/parity-eth/node_modules/.bin:/home/leo/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-10 verbose lifecycle parity-testnet-node@0.1.0~start: CWD: /home/leo/parity-eth
-11 silly lifecycle parity-testnet-node@0.1.0~start: Args: [ '-c', './bin/start-parity.sh "private"' ]
-12 silly lifecycle parity-testnet-node@0.1.0~start: Returned: code: 1  signal: null
-13 info lifecycle parity-testnet-node@0.1.0~start: Failed to exec start script
-14 verbose stack Error: parity-testnet-node@0.1.0 start: `./bin/start-parity.sh "private"`
-14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/usr/share/npm/lib/utils/lifecycle.js:232:16)
-14 verbose stack     at emitTwo (events.js:87:13)
-14 verbose stack     at EventEmitter.emit (events.js:172:7)
-14 verbose stack     at ChildProcess.<anonymous> (/usr/share/npm/lib/utils/spawn.js:24:14)
-14 verbose stack     at emitTwo (events.js:87:13)
-14 verbose stack     at ChildProcess.emit (events.js:172:7)
-14 verbose stack     at maybeClose (internal/child_process.js:821:16)
-14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
-15 verbose pkgid parity-testnet-node@0.1.0
-16 verbose cwd /home/leo/parity-eth
-17 error Linux 4.4.0-34-generic
-18 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start" "private"
-19 error node v4.2.6
-20 error npm  v3.5.2
-21 error code ELIFECYCLE
-22 error parity-testnet-node@0.1.0 start: `./bin/start-parity.sh "private"`
-22 error Exit status 1
-23 error Failed at the parity-testnet-node@0.1.0 start script './bin/start-parity.sh "private"'.
-23 error Make sure you have the latest version of node.js and npm installed.
-23 error If you do, this is most likely a problem with the parity-testnet-node package,
-23 error not with npm itself.
-23 error Tell the author that this fails on your system:
-23 error     ./bin/start-parity.sh "private"
-23 error You can get information on how to open an issue for this project with:
-23 error     npm bugs parity-testnet-node
-23 error Or if that isn't available, you can get their info via:
-23 error     npm owner ls parity-testnet-node
-23 error There is likely additional logging output above.
-24 verbose exit [ 1, true ]
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly loadAllDepsIntoIdealTree Finishing
+20 silly idealTree:prePrune parity-testnet-node@0.1.0
+20 silly idealTree:prePrune ├── ansi-regex@2.0.0
+20 silly idealTree:prePrune ├── balanced-match@0.4.2
+20 silly idealTree:prePrune ├── bignumber.js@2.0.7
+20 silly idealTree:prePrune ├── brace-expansion@1.1.6
+20 silly idealTree:prePrune ├── browser-stdout@1.3.0
+20 silly idealTree:prePrune ├── builtin-modules@1.1.1
+20 silly idealTree:prePrune ├── camelcase@3.0.0
+20 silly idealTree:prePrune ├── cliui@3.2.0
+20 silly idealTree:prePrune ├── code-point-at@1.0.0
+20 silly idealTree:prePrune ├── commander@2.9.0
+20 silly idealTree:prePrune ├── concat-map@0.0.1
+20 silly idealTree:prePrune ├── crypto-js@3.1.6
+20 silly idealTree:prePrune ├── debug@2.2.0
+20 silly idealTree:prePrune ├── decamelize@1.2.0
+20 silly idealTree:prePrune ├── diff@1.4.0
+20 silly idealTree:prePrune ├── error-ex@1.3.0
+20 silly idealTree:prePrune ├── escape-string-regexp@1.0.5
+20 silly idealTree:prePrune ├── find-up@1.1.2
+20 silly idealTree:prePrune ├── fs.realpath@1.0.0
+20 silly idealTree:prePrune ├── get-caller-file@1.0.2
+20 silly idealTree:prePrune ├── glob@7.0.5
+20 silly idealTree:prePrune ├── graceful-fs@4.1.5
+20 silly idealTree:prePrune ├── graceful-readlink@1.0.1
+20 silly idealTree:prePrune ├── growl@1.9.2
+20 silly idealTree:prePrune ├── has-flag@1.0.0
+20 silly idealTree:prePrune ├── hosted-git-info@2.1.5
+20 silly idealTree:prePrune ├── inflight@1.0.5
+20 silly idealTree:prePrune ├── inherits@2.0.1
+20 silly idealTree:prePrune ├── invert-kv@1.0.0
+20 silly idealTree:prePrune ├── is-arrayish@0.2.1
+20 silly idealTree:prePrune ├── is-builtin-module@1.0.0
+20 silly idealTree:prePrune ├── is-fullwidth-code-point@1.0.0
+20 silly idealTree:prePrune ├── is-utf8@0.2.1
+20 silly idealTree:prePrune ├── json3@3.3.2
+20 silly idealTree:prePrune ├── lcid@1.0.0
+20 silly idealTree:prePrune ├── load-json-file@1.1.0
+20 silly idealTree:prePrune ├── lodash._baseassign@3.2.0
+20 silly idealTree:prePrune ├── lodash._basecopy@3.0.1
+20 silly idealTree:prePrune ├── lodash._basecreate@3.0.3
+20 silly idealTree:prePrune ├── lodash._getnative@3.9.1
+20 silly idealTree:prePrune ├── lodash._isiterateecall@3.0.9
+20 silly idealTree:prePrune ├── lodash.assign@4.1.0
+20 silly idealTree:prePrune ├── lodash.create@3.1.1
+20 silly idealTree:prePrune ├── lodash.isarguments@3.0.9
+20 silly idealTree:prePrune ├── lodash.isarray@3.0.4
+20 silly idealTree:prePrune ├── lodash.keys@3.1.2
+20 silly idealTree:prePrune ├── memorystream@0.3.1
+20 silly idealTree:prePrune ├── minimatch@3.0.3
+20 silly idealTree:prePrune ├── minimist@0.0.8
+20 silly idealTree:prePrune ├── mkdirp@0.5.1
+20 silly idealTree:prePrune ├── mocha@3.0.2
+20 silly idealTree:prePrune ├── ms@0.7.1
+20 silly idealTree:prePrune ├── normalize-package-data@2.3.5
+20 silly idealTree:prePrune ├── number-is-nan@1.0.0
+20 silly idealTree:prePrune ├── once@1.3.3
+20 silly idealTree:prePrune ├── os-locale@1.4.0
+20 silly idealTree:prePrune ├── parse-json@2.2.0
+20 silly idealTree:prePrune ├── path-exists@2.1.0
+20 silly idealTree:prePrune ├── path-is-absolute@1.0.0
+20 silly idealTree:prePrune ├── path-type@1.1.0
+20 silly idealTree:prePrune ├── pify@2.3.0
+20 silly idealTree:prePrune ├── pinkie-promise@2.0.1
+20 silly idealTree:prePrune ├── pinkie@2.0.4
+20 silly idealTree:prePrune ├── read-pkg-up@1.0.1
+20 silly idealTree:prePrune ├── read-pkg@1.1.0
+20 silly idealTree:prePrune ├── require-directory@2.1.1
+20 silly idealTree:prePrune ├── require-from-string@1.2.0
+20 silly idealTree:prePrune ├── require-main-filename@1.0.1
+20 silly idealTree:prePrune ├── semver@5.3.0
+20 silly idealTree:prePrune ├── set-blocking@2.0.0
+20 silly idealTree:prePrune ├── solc@0.3.6
+20 silly idealTree:prePrune ├── spdx-correct@1.0.2
+20 silly idealTree:prePrune ├── spdx-exceptions@1.0.5
+20 silly idealTree:prePrune ├── spdx-expression-parse@1.0.2
+20 silly idealTree:prePrune ├── spdx-license-ids@1.2.2
+20 silly idealTree:prePrune ├── string-width@1.0.1
+20 silly idealTree:prePrune ├── strip-ansi@3.0.1
+20 silly idealTree:prePrune ├── strip-bom@2.0.0
+20 silly idealTree:prePrune ├── supports-color@3.1.2
+20 silly idealTree:prePrune ├── utf8@2.1.1
+20 silly idealTree:prePrune ├── validate-npm-package-license@3.0.1
+20 silly idealTree:prePrune ├── web3@0.16.0
+20 silly idealTree:prePrune ├── which-module@1.0.0
+20 silly idealTree:prePrune ├── window-size@0.2.0
+20 silly idealTree:prePrune ├── wrap-ansi@2.0.0
+20 silly idealTree:prePrune ├── wrappy@1.0.2
+20 silly idealTree:prePrune ├── xmlhttprequest@1.8.0
+20 silly idealTree:prePrune ├── y18n@3.2.1
+20 silly idealTree:prePrune ├── yargs-parser@2.4.1
+20 silly idealTree:prePrune └── yargs@4.8.1
+21 silly loadIdealTree Finishing
+22 silly currentTree parity-testnet-node@0.1.0
+22 silly currentTree ├── ansi-regex@2.0.0
+22 silly currentTree ├── balanced-match@0.4.2
+22 silly currentTree ├── bignumber.js@2.0.7
+22 silly currentTree ├── brace-expansion@1.1.6
+22 silly currentTree ├── browser-stdout@1.3.0
+22 silly currentTree ├── builtin-modules@1.1.1
+22 silly currentTree ├── camelcase@3.0.0
+22 silly currentTree ├── cliui@3.2.0
+22 silly currentTree ├── code-point-at@1.0.0
+22 silly currentTree ├── commander@2.9.0
+22 silly currentTree ├── concat-map@0.0.1
+22 silly currentTree ├── crypto-js@3.1.6
+22 silly currentTree ├── debug@2.2.0
+22 silly currentTree ├── decamelize@1.2.0
+22 silly currentTree ├── diff@1.4.0
+22 silly currentTree ├── error-ex@1.3.0
+22 silly currentTree ├── escape-string-regexp@1.0.5
+22 silly currentTree ├── find-up@1.1.2
+22 silly currentTree ├── fs.realpath@1.0.0
+22 silly currentTree ├── get-caller-file@1.0.2
+22 silly currentTree ├── glob@7.0.5
+22 silly currentTree ├── graceful-fs@4.1.5
+22 silly currentTree ├── graceful-readlink@1.0.1
+22 silly currentTree ├── growl@1.9.2
+22 silly currentTree ├── has-flag@1.0.0
+22 silly currentTree ├── hosted-git-info@2.1.5
+22 silly currentTree ├── inflight@1.0.5
+22 silly currentTree ├── inherits@2.0.1
+22 silly currentTree ├── invert-kv@1.0.0
+22 silly currentTree ├── is-arrayish@0.2.1
+22 silly currentTree ├── is-builtin-module@1.0.0
+22 silly currentTree ├── is-fullwidth-code-point@1.0.0
+22 silly currentTree ├── is-utf8@0.2.1
+22 silly currentTree ├── json3@3.3.2
+22 silly currentTree ├── lcid@1.0.0
+22 silly currentTree ├── load-json-file@1.1.0
+22 silly currentTree ├── lodash._baseassign@3.2.0
+22 silly currentTree ├── lodash._basecopy@3.0.1
+22 silly currentTree ├── lodash._basecreate@3.0.3
+22 silly currentTree ├── lodash._getnative@3.9.1
+22 silly currentTree ├── lodash._isiterateecall@3.0.9
+22 silly currentTree ├── lodash.assign@4.1.0
+22 silly currentTree ├── lodash.create@3.1.1
+22 silly currentTree ├── lodash.isarguments@3.0.9
+22 silly currentTree ├── lodash.isarray@3.0.4
+22 silly currentTree ├── lodash.keys@3.1.2
+22 silly currentTree ├── memorystream@0.3.1
+22 silly currentTree ├── minimatch@3.0.3
+22 silly currentTree ├── minimist@0.0.8
+22 silly currentTree ├── mkdirp@0.5.1
+22 silly currentTree ├── mocha@3.0.2
+22 silly currentTree ├── ms@0.7.1
+22 silly currentTree ├── normalize-package-data@2.3.5
+22 silly currentTree ├── number-is-nan@1.0.0
+22 silly currentTree ├── once@1.3.3
+22 silly currentTree ├── os-locale@1.4.0
+22 silly currentTree ├── parse-json@2.2.0
+22 silly currentTree ├── path-exists@2.1.0
+22 silly currentTree ├── path-is-absolute@1.0.0
+22 silly currentTree ├── path-type@1.1.0
+22 silly currentTree ├── pify@2.3.0
+22 silly currentTree ├── pinkie-promise@2.0.1
+22 silly currentTree ├── pinkie@2.0.4
+22 silly currentTree ├── read-pkg-up@1.0.1
+22 silly currentTree ├── read-pkg@1.1.0
+22 silly currentTree ├── require-directory@2.1.1
+22 silly currentTree ├── require-from-string@1.2.0
+22 silly currentTree ├── require-main-filename@1.0.1
+22 silly currentTree ├── semver@5.3.0
+22 silly currentTree ├── set-blocking@2.0.0
+22 silly currentTree ├── solc@0.3.6
+22 silly currentTree ├── spdx-correct@1.0.2
+22 silly currentTree ├── spdx-exceptions@1.0.5
+22 silly currentTree ├── spdx-expression-parse@1.0.2
+22 silly currentTree ├── spdx-license-ids@1.2.2
+22 silly currentTree ├── string-width@1.0.1
+22 silly currentTree ├── strip-ansi@3.0.1
+22 silly currentTree ├── strip-bom@2.0.0
+22 silly currentTree ├── supports-color@3.1.2
+22 silly currentTree ├── utf8@2.1.1
+22 silly currentTree ├── validate-npm-package-license@3.0.1
+22 silly currentTree ├── web3@0.16.0
+22 silly currentTree ├── which-module@1.0.0
+22 silly currentTree ├── window-size@0.2.0
+22 silly currentTree ├── wrap-ansi@2.0.0
+22 silly currentTree ├── wrappy@1.0.2
+22 silly currentTree ├── xmlhttprequest@1.8.0
+22 silly currentTree ├── y18n@3.2.1
+22 silly currentTree ├── yargs-parser@2.4.1
+22 silly currentTree └── yargs@4.8.1
+23 silly idealTree parity-testnet-node@0.1.0
+23 silly idealTree ├── ansi-regex@2.0.0
+23 silly idealTree ├── balanced-match@0.4.2
+23 silly idealTree ├── bignumber.js@2.0.7
+23 silly idealTree ├── brace-expansion@1.1.6
+23 silly idealTree ├── browser-stdout@1.3.0
+23 silly idealTree ├── builtin-modules@1.1.1
+23 silly idealTree ├── camelcase@3.0.0
+23 silly idealTree ├── cliui@3.2.0
+23 silly idealTree ├── code-point-at@1.0.0
+23 silly idealTree ├── commander@2.9.0
+23 silly idealTree ├── concat-map@0.0.1
+23 silly idealTree ├── crypto-js@3.1.6
+23 silly idealTree ├── debug@2.2.0
+23 silly idealTree ├── decamelize@1.2.0
+23 silly idealTree ├── diff@1.4.0
+23 silly idealTree ├── error-ex@1.3.0
+23 silly idealTree ├── escape-string-regexp@1.0.5
+23 silly idealTree ├── find-up@1.1.2
+23 silly idealTree ├── fs.realpath@1.0.0
+23 silly idealTree ├── get-caller-file@1.0.2
+23 silly idealTree ├── glob@7.0.5
+23 silly idealTree ├── graceful-fs@4.1.5
+23 silly idealTree ├── graceful-readlink@1.0.1
+23 silly idealTree ├── growl@1.9.2
+23 silly idealTree ├── has-flag@1.0.0
+23 silly idealTree ├── hosted-git-info@2.1.5
+23 silly idealTree ├── inflight@1.0.5
+23 silly idealTree ├── inherits@2.0.1
+23 silly idealTree ├── invert-kv@1.0.0
+23 silly idealTree ├── is-arrayish@0.2.1
+23 silly idealTree ├── is-builtin-module@1.0.0
+23 silly idealTree ├── is-fullwidth-code-point@1.0.0
+23 silly idealTree ├── is-utf8@0.2.1
+23 silly idealTree ├── json3@3.3.2
+23 silly idealTree ├── lcid@1.0.0
+23 silly idealTree ├── load-json-file@1.1.0
+23 silly idealTree ├── lodash._baseassign@3.2.0
+23 silly idealTree ├── lodash._basecopy@3.0.1
+23 silly idealTree ├── lodash._basecreate@3.0.3
+23 silly idealTree ├── lodash._getnative@3.9.1
+23 silly idealTree ├── lodash._isiterateecall@3.0.9
+23 silly idealTree ├── lodash.assign@4.1.0
+23 silly idealTree ├── lodash.create@3.1.1
+23 silly idealTree ├── lodash.isarguments@3.0.9
+23 silly idealTree ├── lodash.isarray@3.0.4
+23 silly idealTree ├── lodash.keys@3.1.2
+23 silly idealTree ├── memorystream@0.3.1
+23 silly idealTree ├── minimatch@3.0.3
+23 silly idealTree ├── minimist@0.0.8
+23 silly idealTree ├── mkdirp@0.5.1
+23 silly idealTree ├── mocha@3.0.2
+23 silly idealTree ├── ms@0.7.1
+23 silly idealTree ├── normalize-package-data@2.3.5
+23 silly idealTree ├── number-is-nan@1.0.0
+23 silly idealTree ├── once@1.3.3
+23 silly idealTree ├── os-locale@1.4.0
+23 silly idealTree ├── parse-json@2.2.0
+23 silly idealTree ├── path-exists@2.1.0
+23 silly idealTree ├── path-is-absolute@1.0.0
+23 silly idealTree ├── path-type@1.1.0
+23 silly idealTree ├── pify@2.3.0
+23 silly idealTree ├── pinkie-promise@2.0.1
+23 silly idealTree ├── pinkie@2.0.4
+23 silly idealTree ├── read-pkg-up@1.0.1
+23 silly idealTree ├── read-pkg@1.1.0
+23 silly idealTree ├── require-directory@2.1.1
+23 silly idealTree ├── require-from-string@1.2.0
+23 silly idealTree ├── require-main-filename@1.0.1
+23 silly idealTree ├── semver@5.3.0
+23 silly idealTree ├── set-blocking@2.0.0
+23 silly idealTree ├── solc@0.3.6
+23 silly idealTree ├── spdx-correct@1.0.2
+23 silly idealTree ├── spdx-exceptions@1.0.5
+23 silly idealTree ├── spdx-expression-parse@1.0.2
+23 silly idealTree ├── spdx-license-ids@1.2.2
+23 silly idealTree ├── string-width@1.0.1
+23 silly idealTree ├── strip-ansi@3.0.1
+23 silly idealTree ├── strip-bom@2.0.0
+23 silly idealTree ├── supports-color@3.1.2
+23 silly idealTree ├── utf8@2.1.1
+23 silly idealTree ├── validate-npm-package-license@3.0.1
+23 silly idealTree ├── web3@0.16.0
+23 silly idealTree ├── which-module@1.0.0
+23 silly idealTree ├── window-size@0.2.0
+23 silly idealTree ├── wrap-ansi@2.0.0
+23 silly idealTree ├── wrappy@1.0.2
+23 silly idealTree ├── xmlhttprequest@1.8.0
+23 silly idealTree ├── y18n@3.2.1
+23 silly idealTree ├── yargs-parser@2.4.1
+23 silly idealTree └── yargs@4.8.1
+24 silly generateActionsToTake Starting
+25 silly install generateActionsToTake
+26 silly generateActionsToTake Finishing
+27 silly diffTrees action count 0
+28 silly decomposeActions action count 0
+29 silly executeActions Starting
+30 silly install executeActions
+31 silly doSerial global-install 0
+32 silly doParallel fetch 0
+33 verbose lock using /home/leo/.npm/_locks/staging-465bb9c7dca2cff3.lock for /home/leo/parity-eth/node_modules/.staging
+34 silly doParallel extract 0
+35 silly doParallel preinstall 0
+36 silly doReverseSerial remove 0
+37 silly doSerial move 0
+38 silly doSerial finalize 0
+39 silly doSerial build 0
+40 silly doSerial global-link 0
+41 silly doParallel update-linked 0
+42 silly doSerial install 0
+43 silly doSerial postinstall 0
+44 verbose unlock done using /home/leo/.npm/_locks/staging-465bb9c7dca2cff3.lock for /home/leo/parity-eth/node_modules/.staging
+45 silly executeActions Finishing
+46 silly rollbackFailedOptional Starting
+47 silly rollbackFailedOptional Finishing
+48 silly runTopLevelLifecycles Starting
+49 silly install runTopLevelLifecycles
+50 silly preinstall parity-testnet-node@0.1.0 /home/leo/parity-eth/parity-testnet-node-45db8e9d
+51 info lifecycle parity-testnet-node@0.1.0~preinstall: parity-testnet-node@0.1.0
+52 silly lifecycle parity-testnet-node@0.1.0~preinstall: no script for preinstall, continuing
+53 silly build parity-testnet-node@0.1.0
+54 info linkStuff parity-testnet-node@0.1.0
+55 silly linkStuff parity-testnet-node@0.1.0 has /home/leo as its parent node_modules
+56 verbose linkBins parity-testnet-node@0.1.0
+57 verbose linkMans parity-testnet-node@0.1.0
+58 silly install parity-testnet-node@0.1.0 /home/leo/parity-eth/parity-testnet-node-45db8e9d
+59 info lifecycle parity-testnet-node@0.1.0~install: parity-testnet-node@0.1.0
+60 verbose lifecycle parity-testnet-node@0.1.0~install: unsafe-perm in lifecycle true
+61 verbose lifecycle parity-testnet-node@0.1.0~install: PATH: /usr/share/npm/bin/node-gyp-bin:/home/leo/parity-eth/node_modules/.bin:/home/leo/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+62 verbose lifecycle parity-testnet-node@0.1.0~install: CWD: /home/leo/parity-eth
+63 silly lifecycle parity-testnet-node@0.1.0~install: Args: [ '-c', './bin/install.sh' ]
+64 info lifecycle parity-testnet-node@0.1.0~install: Failed to exec install script
+65 warn parity-testnet-node@0.1.0 license should be a valid SPDX license expression
+66 verbose stack Error: parity-testnet-node@0.1.0 install: `./bin/install.sh`
+66 verbose stack spawn ENOENT
+66 verbose stack     at ChildProcess.<anonymous> (/usr/share/npm/lib/utils/spawn.js:17:16)
+66 verbose stack     at emitTwo (events.js:87:13)
+66 verbose stack     at ChildProcess.emit (events.js:172:7)
+66 verbose stack     at maybeClose (internal/child_process.js:821:16)
+66 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+67 verbose pkgid parity-testnet-node@0.1.0
+68 verbose cwd /home/leo/parity-eth
+69 error Linux 4.4.0-34-generic
+70 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install"
+71 error node v4.2.6
+72 error npm  v3.5.2
+73 error file sh
+74 error code ELIFECYCLE
+75 error errno ENOENT
+76 error syscall spawn
+77 error parity-testnet-node@0.1.0 install: `./bin/install.sh`
+77 error spawn ENOENT
+78 error Failed at the parity-testnet-node@0.1.0 install script './bin/install.sh'.
+78 error Make sure you have the latest version of node.js and npm installed.
+78 error If you do, this is most likely a problem with the parity-testnet-node package,
+78 error not with npm itself.
+78 error Tell the author that this fails on your system:
+78 error     ./bin/install.sh
+78 error You can get information on how to open an issue for this project with:
+78 error     npm bugs parity-testnet-node
+78 error Or if that isn't available, you can get their info via:
+78 error     npm owner ls parity-testnet-node
+78 error There is likely additional logging output above.
+79 verbose exit [ 1, true ]
