@@ -2,8 +2,11 @@
 # this will start parity in private, testnet or live mode and using npm start
 # lauch web ui localhost:
 # typeofchain=!#
+
 root=$HOME
+
 # chainBlock="testnet"
+
 dataDir="paridata"
 
 
@@ -22,26 +25,28 @@ fi
 # this runs the parity command to list all accounts created and available in parity and put the output in an array
 output=( $(parity account list) )
 # store the first address, which is index [0] in the key array and is usually the default address
-coinbase=${output[2]}
+coinbase=${output[0]}
+coinbase1=${coinbase#"["}
+coinbase1=${coinbase1%","}
 
 # check to see if we have at least one account, if yes set address to that if not create an account, with default password and set the address to it
+
 if [ ! -z "$coinbase" ]; then
-    address=${output[2]}
+    # address=${output[1]}
+    address=$coinbase1
     # exit
 else
     $(parity account new --password ./lib/pswd)
     output=( $(parity account list) )
-    address=${output[2]}
+    #address=${output[1]}
+    address=$coinbase1
     echo "Since we couldn't find an address in parity for you, we took the time to create one account. The password is located in the lib/pswd file"
     echo " "
     echo "here it is : " $address " you can also use [parity account list], to show all your accounts"
     # exit
 fi
 
-
-
-# echo $#
-
+#
 # check to see what enviroment we are starting
 if [ $# = 1 ] && [ $1 = "private" ]; then
     typeofchain=$1
@@ -74,6 +79,8 @@ if [ $typeofchain = "private" ]; then
 
 # address=0x$(parity account list | awk 'END{print}' | tr -cd '[[:alnum:]]._-')
 # address=0x$(parity account list | awk 'BEGIN{print}' | tr -cd '[[:alnum:]]._-')
+
+# address="8c8091a36a79f28f4fb8c85ae00d5a2ee1da0e12"
 
 echo "address: $address"
 echo ""

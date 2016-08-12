@@ -20,7 +20,7 @@ echo ""
 # the command below get you the latest working copy but you have to do extra working.
 # once this is build you will have to copy files to /usr/local/bin
 # nevermind it is taken care of, we will copy it over once it is done...
-#bash <(curl https://raw.githubusercontent.com/ethcore/parity/master/install-deps.sh -L)
+
 bash <(cargo install --git https://github.com/ethcore/parity.git parity)
 
 # cd /tmp/parity/ && cp target/
@@ -31,5 +31,5 @@ upgradedParityVer=${parityUpgradeVersion[2]}
 if [ $currentParityVer = $upgradedParityVer ]; then
 echo "it looks like the current parity is the same as the upgrade"
 else
-echo "Your new parity version is $upgradedParityVer"
+echo "Your new parity version is:  $upgradedParityVer"
 fi
