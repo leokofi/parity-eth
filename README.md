@@ -37,7 +37,7 @@ npm install
 
 What should happen:
 > This will install all required npm packages in the folder that are list in the package.json file, and it also runs the install script in the bin directory.
-> Install.sh script will install parity binary without developer options. If you want developer options edit the install.sh and comment out the default and uncomment the developer option.  
+> Install.sh **** This will take about 10 min**** script will compile and install parity. This will install the development version and not the current stable version and uncomment the developer option.  
 > It will install parity and create .parity directory in the $HOME directory
 > it will also create a node_modules folder which keeps all nodejs stuff.
 
