@@ -20,7 +20,8 @@ echo ""
 # the command below get you the latest working copy but you have to do extra working.
 # once this is build you will have to copy files to /usr/local/bin
 # nevermind it is taken care of, we will copy it over once it is done...
-bash <(curl https://raw.githubusercontent.com/ethcore/parity/master/install-deps.sh -L)
+#bash <(curl https://raw.githubusercontent.com/ethcore/parity/master/install-deps.sh -L)
+bash <(cargo install --git https://github.com/ethcore/parity.git parity)
 
 # cd /tmp/parity/ && cp target/
 

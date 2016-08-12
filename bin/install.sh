@@ -31,9 +31,13 @@ sudo apt-get install solc ethminer -y
 pause 'This script will install most of the Ethereum parity packages, press [Enter] to continue...'
 
 # this is for the binary install of parity don't need to do anythiny else one it is done.
-bash <(curl https://get.parity.io -Lk) # this one install parity without the rust compiler for development
+# bash <(curl https://get.parity.io -Lk) # this one install parity without the rust compiler for development
 # the below will installs the developer addition. comment out if you want rust and other packages installed
 # bash <(curl https://raw.githubusercontent.com/ethcore/parity/master/install-deps.sh -L)
+
+#cd /tmp/ && git clone https://github.com/ethcore/parity && cd parity
+#bash <(cargo build --release)
+bash <(cargo install --git https://github.com/ethcore/parity.git parity)
 
 
 pause 'hopefully no errors showed up in the install process, press [Enter] to finish install...'
