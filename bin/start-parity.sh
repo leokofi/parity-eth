@@ -42,6 +42,7 @@ if [ $output = "[]" ]; then
     coinbase=${output[0]}
     coinbase1=${coinbase#"["}
     coinbase1=${coinbase1%","}
+    coinbase1=${coinbase1%"]"}
 
     # address=${output[1]}
     address=$coinbase1
@@ -51,6 +52,7 @@ else
     coinbase=${output[0]}
     coinbase1=${coinbase#"["}
     coinbase1=${coinbase1%","}
+    coinbase1=${coinbase1%"]"}
     #address=${output[1]}
     address=$coinbase1
  # exit
