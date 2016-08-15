@@ -25,25 +25,35 @@ fi
 # this runs the parity command to list all accounts created and available in parity and put the output in an array
 output=( $(parity account list) )
 # store the first address, which is index [0] in the key array and is usually the default address
-coinbase=${output[0]}
-coinbase1=${coinbase#"["}
-coinbase1=${coinbase1%","}
+#coinbase=${output[0]}
+#coinbase1=${coinbase#"["}
+#coinbase1=${coinbase1%","}
 
 # check to see if we have at least one account, if yes set address to that if not create an account, with default password and set the address to it
 
-if [ ! -z "$coinbase" ]; then
-    # address=${output[1]}
-    address=$coinbase1
-    # exit
-else
-    $(parity account new --password ./lib/pswd)
-    output=( $(parity account list) )
-    #address=${output[1]}
-    address=$coinbase1
+#if [ ! -z "$coinbase" ]; then
+if [ $output = "[]" ]; then
+
     echo "Since we couldn't find an address in parity for you, we took the time to create one account. The password is located in the lib/pswd file"
     echo " "
+
+    $(parity account new --password ./lib/pswd)
+    output=( $(parity account list) )
+    coinbase=${output[0]}
+    coinbase1=${coinbase#"["}
+    coinbase1=${coinbase1%","}
+
+    # address=${output[1]}
+    address=$coinbase1
     echo "here it is : " $address " you can also use [parity account list], to show all your accounts"
     # exit
+else
+    coinbase=${output[0]}
+    coinbase1=${coinbase#"["}
+    coinbase1=${coinbase1%","}
+    #address=${output[1]}
+    address=$coinbase1
+ # exit
 fi
 
 #

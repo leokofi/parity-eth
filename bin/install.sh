@@ -53,6 +53,9 @@ if [[ -f $parityPath ]]; then
 else
     echo "something really went wrong"
 fi
+
+#pause 'We need to reboot your system, Press [Enter] to reboot'
+# sudo reboot
 # uncomment this out if you are running the developer install.
 # echo "Run the commands below"
 # print "cd /tmp/parity/ and cp"
