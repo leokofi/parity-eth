@@ -37,7 +37,7 @@ if [ $output = "[]" ]; then
     echo "Since we couldn't find an address in parity for you, we took the time to create one account. The password is located in the lib/pswd file"
     echo " "
 
-    $(parity account new)
+    bash <(parity account new)
     output=( $(parity account list) )
     coinbase=${output[0]}
     coinbase1=${coinbase#"["}
