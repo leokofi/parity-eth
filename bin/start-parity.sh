@@ -38,8 +38,8 @@ if [ $output = "[]" ]; then
     echo " "
 
 ${parity account new}
-    read PSWD
-    echo $PSWD
+    #read PSWD
+    #echo $PSWD
     exit 1
     output=( $(parity account list) )
     coinbase=${output[0]}
