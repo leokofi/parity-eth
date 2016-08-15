@@ -37,7 +37,7 @@ if [ $output = "[]" ]; then
     echo "Since we couldn't find an address in parity for you, we took the time to create one account. The password is located in the lib/pswd file"
     echo " "
 
-    echo "$(parity account new)""
+    echo "$(parity account new)"
     read PSWD
     echo $PSWD
     exit 1
