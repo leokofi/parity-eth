@@ -101,6 +101,8 @@ echo ""
 echo "SINCE THIS IS A PRIVATE BLOCKCHAIN PLEASE REMEMBER THAT YOU ARE YOUR OWN MINER"
 echo "HENCE YOU WILL NEED TO START ETHMINER WITH THE COMMAND IN ANOTHER TERMINAL"
 echo "open a new terminal ctrl + alt + t, and type ethminer"
+echo $installDir/lib/pswd
+cat $installDir/lib/pswd
 
 # parity --chain ./lib/genesis.json  --author ${address} --unlock ${address} --password ./lib/pswd --jsonrpc-interface all
 # parity --identity leonode --datadir $root/$dataDir/$typeofchain $chainBlock  --author $address
