@@ -39,7 +39,7 @@ if [ $output = "[]" ]; then
     $(parity account new)
     #read PSWD
 
-    exit 1
+    #exit 1
     output=( $(parity account list) )
     coinbase=${output[0]}
     coinbase1=${coinbase#"["}
