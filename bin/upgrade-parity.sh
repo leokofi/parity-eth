@@ -21,7 +21,7 @@ echo ""
 # once this is build you will have to copy files to /usr/local/bin
 # nevermind it is taken care of, we will copy it over once it is done...
 
-bash <(cargo install --git https://github.com/ethcore/parity.git parity)
+bash <(cargo install --force --git https://github.com/ethcore/parity.git parity)
 
 # cd /tmp/parity/ && cp target/
 
