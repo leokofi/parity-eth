@@ -38,6 +38,19 @@ bash <(curl https://get.parity.io -Lk) # this one install parity without the rus
 # bash <(cargo build --release)
 #bash <(cargo install --git https://github.com/ethcore/parity.git parity)
 
+pause 'We are going to take care of some quick house keeping, for ubuntu node, press [Enter] to move on...'
+
+NODE_PATH=`which node 2>/dev/null`
+NODEJS_PATH=`which nodejs 2>/dev/null`
+
+if [[ -f $NODE_PATH ]]; then
+    echo $NODE_PATH
+elif [[ -f $NODEJS_PATH ]]; then
+    sudo ln -s /usr/bin/nodejs /usr/bin/node
+else
+    echo 'It looks like we have issus with node js binary location, please go over the README about installing nodejs'
+fi
+
 
 pause 'hopefully no errors showed up in the install process, press [Enter] to finish install...'
 echo "npm start private for a private blockchain"
