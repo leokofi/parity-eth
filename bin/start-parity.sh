@@ -104,10 +104,11 @@ echo "open a new terminal ctrl + alt + t, and type ethminer"
 echo "$installDir/lib/pswd"
 cat "$installDir/lib/pswd"
 
- parity --chain ./lib/genesis.json  --author ${address} --unlock ${address} --password ./lib/pswd --jsonrpc-interface all ui
+#parity --chain ./lib/genesis.json  --author ${address} --unlock ${address} --password ./lib/pswd --jsonrpc-interface all ui
 # parity --identity leonode --datadir $root/$dataDir/$typeofchain $chainBlock  --author $address
 # parity $chainBlock --identity leonode --nodiscover --nat none --datadir $root/$dataDir/$typeofchain  $chainBlock --pruning fast --author $address -jw ui
 ##parity --chain $root/parity-eth/lib/genesis.json --datadir $root/$dataDir/$typeofchain --keys-path $root/$dataDir/$typeofchain/keys --unlock $address --password $installDir/lib/pswd --identity sonia --pruning fast --author $address ui
+parity --chain $root/parity-eth/lib/genesis.json --datadir $root/$dataDir/$typeofchain --unlock $address --password $installDir/lib/pswd --identity sonia --pruning fast --author $address ui
 ##parity --chain $root/parity-eth/lib/genesis.json --datadir $root/$dataDir/$typeofchain --keys-path $root/$dataDir/$typeofchain/keys --unlock $address --password  ./lib/pswd
 ##parity --chain $root/parity-eth/lib/genesis.json --datadir $root/$dataDir/$typeofchain  --keys-path $root/$dataDir/$typeofchain/keys  --identity sonia  --pruning fast --author $address ui
 # parity --chain ~/parity-eth/lib/genesis.json --fork normal --datadir $root/$dataDir/$typeofchain --pruning fast -j ui
