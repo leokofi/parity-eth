@@ -7,6 +7,7 @@ root=$HOME
 installDir=$(pwd)
 # chainBlock="testnet"
 
+# the directory that will keep parity data
 dataDir="paridata"
 
 
@@ -34,7 +35,7 @@ output=( $(parity account list) )
 #if [ ! -z "$coinbase" ]; then
 if [ $output = "[]" ]; then
 
-    echo "Since we couldn't find an address in parity for you, we took the time to create one account. The password is located in the lib/pswd file"
+    echo "Since we couldn't find a wallet address in parity for you, we took the time to create one account. The password is located in the lib/pswd file"
     #echo " "
 $(echo parity account new)
     #read PSWD

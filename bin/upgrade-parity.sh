@@ -1,5 +1,5 @@
 #!/bin/bash
-# this will upgrade parity create
+# this will upgrade only parity
 
 
 function pause(){
@@ -14,14 +14,14 @@ echo ""
 # echo $currentParityVer
 
 # now we run the script to install parity, as it doesn't have an upgrade command yet'
-# default easy install command, but it is behind
-#bash <(curl https://get.parity.io -Lk) # this one install parity without the rust compiler for development
+# default easy install command, this should get the latest release version
+bash <(curl https://get.parity.io -Lk) # this one install parity without the rust compiler for development
 
 # the command below get you the latest working copy but you have to do extra working.
 # once this is build you will have to copy files to /usr/local/bin
 # nevermind it is taken care of, we will copy it over once it is done...
 
-bash <(cargo install --force --git https://github.com/ethcore/parity.git parity)
+#bash <(cargo install --force --git https://github.com/ethcore/parity.git parity)
 
 # cd /tmp/parity/ && cp target/
 

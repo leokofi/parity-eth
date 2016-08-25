@@ -1,5 +1,10 @@
 #!/bin/bash
-# this will upgrade parity create
+# we add ethereum repository to the source.list
+# update and upgrade your required packages
+# this will check if rustc is install, which is requied in order to compile parity
+# if rustc is not installed it will install it.
+# parity stable release is installed.
+# for ubuntu if you installed nodejs, that does not mean that node will point to nodejs so we check and make the required adjustments
 
 
 function pause(){
@@ -18,6 +23,7 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 #sudo apt-get install ethminer -y
 #sudo apt-get install solc -y
+
 pause 'This script will install most of the Ethereum parity packages, press [Enter] to continue...'
 
 RUSTC_PATH=$(which rustc 2>/dev/null)
@@ -30,9 +36,9 @@ else
 fi
 
 # this is for the binary install of parity don't need to do anything else one it is done.
-bash <(curl https://get.parity.io -Lk) # this one install parity without the rust compiler for development
+bash <(curl https://get.parity.io -Lk) # this one install parity without the rust compiler for development release package
 # the below will installs the developer addition. comment out if you want rust and other packages installed
-# bash <(curl https://raw.githubusercontent.com/ethcore/parity/master/install-deps.sh -L)
+# bash <(curl https://raw.githubusercontent.com/ethcore/parity/master/install-deps.sh -L) # this doesn't seem to work anymore
 
 # cd /tmp/ && git clone https://github.com/ethcore/parity && cd parity
 # bash <(cargo build --release)
