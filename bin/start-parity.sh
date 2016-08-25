@@ -102,7 +102,7 @@ echo "SINCE THIS IS A PRIVATE BLOCKCHAIN PLEASE REMEMBER THAT YOU ARE YOUR OWN M
 echo "HENCE YOU WILL NEED TO START ETHMINER WITH THE COMMAND IN ANOTHER TERMINAL"
 echo "open a new terminal ctrl + alt + t, and type ethminer"
 echo "$installDir/lib/pswd"
-cat "$installDir/lib/pswd"
+#cat "$installDir/lib/pswd"
 
 #parity --chain ./lib/genesis.json  --author ${address} --unlock ${address} --password ./lib/pswd --jsonrpc-interface all ui
 # parity --identity leonode --datadir $root/$dataDir/$typeofchain $chainBlock  --author $address
@@ -117,6 +117,7 @@ parity --chain $root/parity-eth/lib/genesis.json --datadir $root/$dataDir/$typeo
 else
 
 # parity --datadir=$root/$dataDir/$typeofchain  --chain=$chainBlock --unlock="" --pruning=fast --author= ui
-parity --datadir $root/$dataDir/$typeofchain $chainBlock --keys-path $root/$dataDir/$typeofchain/keys --unlock $address --password ./lib/pswd --pruning fast --author $address ui
+# parity --datadir $root/$dataDir/$typeofchain $chainBlock --keys-path $root/$dataDir/$typeofchain/keys --unlock $address --password ./lib/pswd --pruning fast --author $address ui
+parity --datadir $root/$dataDir/$typeofchain $chainBlock --unlock $address --password ./lib/pswd --pruning fast --author $address ui
 
 fi
