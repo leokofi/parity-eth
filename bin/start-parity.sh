@@ -117,7 +117,7 @@ parity --chain $root/parity-eth/lib/genesis.json --datadir $root/$dataDir/$typeo
 else
 
 # parity --datadir=$root/$dataDir/$typeofchain  --chain=$chainBlock --unlock="" --pruning=fast --author= ui
-# parity --datadir $root/$dataDir/$typeofchain $chainBlock --keys-path $root/$dataDir/$typeofchain/keys --unlock $address --password ./lib/pswd --pruning fast --author $address ui
-parity --datadir $root/$dataDir/$typeofchain $chainBlock --unlock $address --password ./lib/pswd --pruning fast --author $address ui
+ parity --datadir $root/$dataDir/$typeofchain $chainBlock --keys-path $root/$dataDir/$typeofchain/keys --unlock $address --password ./lib/pswd --pruning fast --author $address ui
+# parity --datadir $root/$dataDir/$typeofchain $chainBlock --unlock $address --password ./lib/pswd --pruning fast --author $address ui
 
 fi
