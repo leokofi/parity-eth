@@ -63,6 +63,12 @@ For private blockchain the gensis.json file is loaded, hence you need to run eth
 
 Todo : for private blockchain being able to configure and setup other nodes to create a full private blockchain.
 
+** The full private blockchain network option within your own LAN option
+
+we added the --identity flag in the parity option with the default being --identity $HOME
+Node1 which is the bootnode is required and the address of that node, is given to you when you run npm start private e.g
+* Public node URL: enode://89a3bcb1bd42f03b458803915819d3d67a5c7a2443c33399cbfa0b5c20b1585d689a6fa79e5cf8142f851248241cdc882155fc09ed706d6b90fbce357ab42239@192.168.0.11:30303
+
 to interact with ethereum via command line... you can use node, open a new terminal and type:
 
 ```bash
