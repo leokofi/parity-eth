@@ -7,3 +7,4 @@ jspm_packages
 testing.sh
 install-old.sh
 npm-debug.log
+leo-upgrade-parity.sh
