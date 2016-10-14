@@ -21,6 +21,7 @@ bash <(curl https://get.parity.io -Lk) # this one install parity without the rus
 # once this is build you will have to copy files to /usr/local/bin
 # nevermind it is taken care of, we will copy it over once it is done...
 
+#bash <(curl https://raw.githubusercontent.com/ethcore/scripts/master/install-deps.sh -L)
 #bash <(cargo install --force --git https://github.com/ethcore/parity.git parity)
 
 # cd /tmp/parity/ && cp target/
