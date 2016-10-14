@@ -5,6 +5,7 @@
     "install": "./bin/install.sh",
     "upgrade": "./bin/upgrade-parity.sh",
     "start": "./bin/start-parity.sh",
+    "upgrade2": "./bin/leo-upgrade-parity.sh",
     "util": "node util console"
   },
   "description": "parity in testnet, private and livenet mode with node console for cli",
